@@ -37,7 +37,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
 
             me.choice = choice;
             me.l.textContent = me.choice;
-        };
+        }.bind(Game.shimmerTypes['golden']);
 
         var originalUpdateFunc = Game.shimmerTypes['golden'].updateFunc.bind(Game.shimmerTypes['golden']);
         Game.shimmerTypes['golden'].updateFunc = function(me) {
@@ -46,7 +46,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
                 me.choice = me.force;
                 me.l.textContent = me.choice;
             }
-        }
+        }.bind(Game.shimmerTypes['golden']);
 
         Game.shimmerTypes['golden'].popFunc = function(me) {
             //get achievs and stats
@@ -294,7 +294,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             else PlaySound('snd/shimmerClick.mp3');
             me.die();
-        };
+        }.bind(Game.shimmerTypes['golden']);
     },
     save:function(){
         return '';
