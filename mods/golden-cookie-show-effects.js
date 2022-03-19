@@ -32,8 +32,11 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (this.last!='' && Math.random()<0.8 && list.indexOf(this.last)!=-1) list.splice(list.indexOf(this.last),1);//80% chance to force a different one
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
+            choice = 'click frenzy';
 
             if (this.chain>0) choice='chain cookie';
+
+            this.last=choice;
 
             me.choice = choice;
             me.l.textContent = me.choice;
@@ -110,7 +113,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (me.force!='') {this.chain=0;choice=me.force;me.force='';}
             if (choice!='chain cookie') this.chain=0;
 
-            this.last=choice;
+            //this.last=choice;
 
             //create buff for effect
             //buff duration multiplier
