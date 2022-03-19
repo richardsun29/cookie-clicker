@@ -32,6 +32,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (this.last!='' && Math.random()<0.8 && list.indexOf(this.last)!=-1) list.splice(list.indexOf(this.last),1);//80% chance to force a different one
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
+            choice = 'click frenzy';
 
             if (this.chain>0) choice='chain cookie';
 
