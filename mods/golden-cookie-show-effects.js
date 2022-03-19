@@ -40,6 +40,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
 
             me.choice = choice;
             me.l.textContent = me.choice;
+            me.l.style.fontSize = '30px';
+            me.l.style.textShadow = '0px 0px 5px #000';
         }.bind(Game.shimmerTypes['golden']);
 
         var originalUpdateFunc = Game.shimmerTypes['golden'].updateFunc.bind(Game.shimmerTypes['golden']);
@@ -49,6 +51,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
                 me.choice = me.force;
                 me.l.textContent = me.choice;
             }
+            me.l.style.fontSize = '30px';
+            me.l.style.textShadow = '0px 0px 5px #000';
         }.bind(Game.shimmerTypes['golden']);
 
         Game.shimmerTypes['golden'].popFunc = function(me) {
