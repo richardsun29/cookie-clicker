@@ -32,7 +32,13 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (this.last!='' && Math.random()<0.8 && list.indexOf(this.last)!=-1) list.splice(list.indexOf(this.last),1);//80% chance to force a different one
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
-            choice = 'click frenzy';
+
+            if (this.last == 'click frenzy') {
+                choice = 'frenzy';
+            }
+            else {
+                choice = 'click frenzy';
+            }
 
             if (this.chain>0) choice='chain cookie';
 
@@ -48,7 +54,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
         Game.shimmerTypes['golden'].updateFunc = function(me) {
             originalUpdateFunc(me);
             if (me.force != '') {
-                me.choice = me.force;
+                me.choice = 'click frenzy'; //me.force;
                 me.l.textContent = me.choice;
             }
             me.l.style.fontSize = '30px';
