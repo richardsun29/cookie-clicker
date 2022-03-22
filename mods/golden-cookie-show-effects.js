@@ -33,11 +33,11 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
 
-            if (this.last == 'click frenzy') {
-                choice = 'frenzy';
+            if (this.last != 'dragonflight') {
+                choice = 'dragonflight';
             }
             else {
-                choice = 'click frenzy';
+                choice = 'frenzy';
             }
 
             if (this.chain>0) choice='chain cookie';
