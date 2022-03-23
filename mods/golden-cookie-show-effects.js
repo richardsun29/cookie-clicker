@@ -54,6 +54,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
         Game.shimmerTypes['golden'].updateFunc = function(me) {
             originalUpdateFunc(me);
             if (me.force != '') {
+                this.chain = 0;
+                me.force = '';
                 me.choice = 'click frenzy'; //me.force;
                 me.l.textContent = me.choice;
             }
