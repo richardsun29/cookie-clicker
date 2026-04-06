@@ -35,11 +35,13 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
 
             if (this.last != 'click frenzy') {
                 choice = 'click frenzy';
-                if (Math.random() < 0.2) choice = 'cookie storm';
+                //if (Math.random() < 0.3) choice = 'frenzy';
+                if (Math.random() < 0.5) choice = 'cookie storm';
             }
             else {
                 choice = 'frenzy';
             }
+            if (Game.hasBuff('cookie storm')) choice = 'lucky';
 
             if (this.chain>0) choice='chain cookie';
 
