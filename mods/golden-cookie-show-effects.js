@@ -33,7 +33,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
 
-            if (this.last != 'click frenzy') {
+            if (choice == 'multiply cookies') choice = 'click frenzy';
+            /*if (this.last != 'click frenzy') {
                 choice = 'click frenzy';
                 //if (Math.random() < 0.3) choice = 'frenzy';
                 if (Math.random() < 0.5) choice = 'cookie storm';
@@ -41,7 +42,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             else {
                 choice = 'frenzy';
             }
-            if (Game.hasBuff('cookie storm')) choice = 'lucky';
+            if (Game.hasBuff('cookie storm')) choice = 'lucky';*/
 
             if (this.chain>0) choice='chain cookie';
 
@@ -56,12 +57,14 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
         var originalUpdateFunc = Game.shimmerTypes['golden'].updateFunc.bind(Game.shimmerTypes['golden']);
         Game.shimmerTypes['golden'].updateFunc = function(me) {
             originalUpdateFunc(me);
+            /*
             if (me.force != '') {
                 this.chain = 0;
                 me.force = '';
                 me.choice = 'click frenzy'; //me.force;
                 me.l.textContent = me.choice;
             }
+            */
             me.l.style.fontSize = '30px';
             me.l.style.textShadow = '0px 0px 5px #000';
         }.bind(Game.shimmerTypes['golden']);
