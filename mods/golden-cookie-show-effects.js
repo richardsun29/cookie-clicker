@@ -8,8 +8,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             originalInitFunc(me);
             //select an effect
             var list=[];
-            if (me.wrath>0) list.push('clot','multiply cookies','ruin cookies');
-            else list.push('frenzy','multiply cookies');
+            if (me.wrath>0) list.push('clot','click frenzy','ruin cookies');
+            else list.push('frenzy', /*'multiply cookies', */ 'click frenzy');
             if (me.wrath>0 && Game.hasGod && Game.hasGod('scorn')) list.push('clot','ruin cookies','clot','ruin cookies');
             if (me.wrath>0 && Math.random()<0.3) list.push('blood frenzy','chain cookie','cookie storm');
             else if (Math.random()<0.03 && Game.cookiesEarned>=100000) list.push('chain cookie','cookie storm');
@@ -19,7 +19,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
 
             if (Game.BuildingsOwned>=10 && Math.random()<0.25) list.push('building special');
 
-            if (Game.canLumps() && Math.random()<0.0005) list.push('free sugar lump');
+            if (Game.canLumps() && Math.random()<0.05) list.push('free sugar lump');
 
             if ((me.wrath==0 && Math.random()<0.15) || Math.random()<0.05)
             {
@@ -33,7 +33,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
 
-            if (choice == 'multiply cookies') choice = 'click frenzy';
+            //if (choice == 'multiply cookies') choice = 'click frenzy';
             /*if (this.last != 'click frenzy') {
                 choice = 'click frenzy';
                 //if (Math.random() < 0.3) choice = 'frenzy';
@@ -49,7 +49,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             this.last=choice;
 
             me.choice = choice;
-            me.l.textContent = me.choice;
+            me.l.textContent = me.force || me.choice;
             me.l.style.fontSize = '30px';
             me.l.style.textShadow = '0px 0px 5px #000';
         }.bind(Game.shimmerTypes['golden']);
