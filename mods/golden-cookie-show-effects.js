@@ -8,8 +8,10 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             originalInitFunc(me);
             //select an effect
             var list=[];
-            if (me.wrath>0) list.push('clot','click frenzy','ruin cookies');
-            else list.push('frenzy', /*'multiply cookies', */ 'click frenzy');
+            //if (me.wrath>0) list.push('clot','multiply cookies','ruin cookies');
+            //else list.push('frenzy', 'multiply cookies');
+            list.push('frenzy', 'click frenzy');
+            
             if (me.wrath>0 && Game.hasGod && Game.hasGod('scorn')) list.push('clot','ruin cookies','clot','ruin cookies');
             if (me.wrath>0 && Math.random()<0.3) list.push('blood frenzy','chain cookie','cookie storm');
             else if (Math.random()<0.03 && Game.cookiesEarned>=100000) list.push('chain cookie','cookie storm');
