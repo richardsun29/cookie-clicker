@@ -35,6 +35,9 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
 
+            choice = 'click frenzy';
+            if (Math.random() < 0.2) choice = 'cookie storm';
+
             //if (choice == 'multiply cookies') choice = 'click frenzy';
             /*if (this.last != 'click frenzy') {
                 choice = 'click frenzy';
