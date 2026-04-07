@@ -242,7 +242,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             else if (choice=='click frenzy')
             {
-                buff=Game.gainBuff('click frenzy',Math.ceil(13*effectDurMod),777);
+                buff=Game.gainBuff('click frenzy',Math.ceil(13*effectDurMod),7777);
             }
             else if (choice=='dragonflight')
             {
