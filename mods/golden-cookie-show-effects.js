@@ -31,7 +31,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
                 if (Math.random()<Game.auraMult('Dragonflight')) list.push('dragonflight');
             }
 
-            if (this.last!='' && Math.random()<0.8 && list.indexOf(this.last)!=-1) list.splice(list.indexOf(this.last),1);//80% chance to force a different one
+            if (this.last!='' && list.length>1 && Math.random()<0.8 && list.indexOf(this.last)!=-1) list.splice(list.indexOf(this.last),1);//80% chance to force a different one
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
 
