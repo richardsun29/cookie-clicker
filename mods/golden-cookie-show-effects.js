@@ -10,7 +10,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             var list=[];
             //if (me.wrath>0) list.push('clot','multiply cookies','ruin cookies');
             //else list.push('frenzy', 'multiply cookies');
-            list.push('frenzy', 'click frenzy');
+            list.push('click frenzy');
             
             if (me.wrath>0 && Game.hasGod && Game.hasGod('scorn')) list.push('clot','ruin cookies','clot','ruin cookies');
             if (me.wrath>0 && Math.random()<0.3) list.push('blood frenzy','chain cookie','cookie storm');
@@ -19,11 +19,11 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (Math.random()<0.1 && (Math.random()<0.05 || !Game.hasBuff('Dragonflight'))) list.push('click frenzy');
             if (me.wrath && Math.random()<0.1) list.push('cursed finger');
 
-            if (Game.BuildingsOwned>=10 && Math.random()<0.25) list.push('building special');
+            //if (Game.BuildingsOwned>=10 && Math.random()<0.25) list.push('building special');
 
             if (Game.canLumps() && Math.random()<0.05) list.push('free sugar lump');
 
-            if ((me.wrath==0 && Math.random()<0.15) || Math.random()<0.05)
+            if ((me.wrath==0 && Math.random()<0.35) || Math.random()<0.25)
             {
                 //if (Game.hasAura('Reaper of Fields')) list.push('dragon harvest');
                 if (Math.random()<Game.auraMult('Reaper of Fields')) list.push('dragon harvest');
@@ -35,8 +35,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             if (Math.random()<0.0001) list.push('blab');
             var choice=choose(list);
 
-            choice = 'click frenzy';
-            if (Math.random() < 0.2) choice = 'cookie storm';
+            //choice = 'click frenzy';
+            if (Math.random() < 0.1) choice = 'cookie storm';
 
             //if (choice == 'multiply cookies') choice = 'click frenzy';
             /*if (this.last != 'click frenzy') {
