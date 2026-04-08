@@ -55,6 +55,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
 
             me.choice = choice;
             me.l.textContent = me.force || me.choice;
+            if (me.l.textContent == 'cookie storm drop') me.l.textContent = '';
             me.l.style.fontSize = '30px';
             me.l.style.textShadow = '0px 0px 5px #000';
         }.bind(Game.shimmerTypes['golden']);
