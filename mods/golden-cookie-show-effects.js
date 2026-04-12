@@ -49,13 +49,13 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             if (Game.hasBuff('cookie storm')) choice = 'lucky';*/
 
-            if (me.force) choice = me.force;
+            
             if (this.chain>0) choice='chain cookie';
 
             this.last=choice;
 
             me.choice = choice;
-            me.l.textContent = me.choice;
+            me.l.textContent = me.force || me.choice;
             if (me.l.textContent == 'cookie storm drop') me.l.textContent = '';
             me.l.style.fontSize = '30px';
             me.l.style.textShadow = '0px 0px 5px #000';
