@@ -49,12 +49,13 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             if (Game.hasBuff('cookie storm')) choice = 'lucky';*/
 
+            if (me.force) choice = me.force;
             if (this.chain>0) choice='chain cookie';
 
             this.last=choice;
 
             me.choice = choice;
-            me.l.textContent = me.force || me.choice;
+            me.l.textContent = me.choice;
             if (me.l.textContent == 'cookie storm drop') me.l.textContent = '';
             me.l.style.fontSize = '30px';
             me.l.style.textShadow = '0px 0px 5px #000';
@@ -210,7 +211,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             else if (choice=='dragon harvest')
             {
-                buff=Game.gainBuff('dragon harvest',Math.ceil(60*effectDurMod),15);
+                buff=Game.gainBuff('dragon harvest',Math.ceil(180*effectDurMod),150);
             }
             else if (choice=='everything must go')
             {
