@@ -244,11 +244,11 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             else if (choice=='click frenzy')
             {
-                buff=Game.gainBuff('click frenzy',Math.ceil(13*effectDurMod),7777);
+                buff=Game.gainBuff('click frenzy',Math.ceil(13*effectDurMod),77777);
             }
             else if (choice=='dragonflight')
             {
-                buff=Game.gainBuff('dragonflight',Math.ceil(10*effectDurMod),11111);
+                buff=Game.gainBuff('dragonflight',Math.ceil(10*effectDurMod),111111);
                 //if (Math.random()<0.8) Game.killBuff('Click frenzy');
             }
             else if (choice=='chain cookie')
