@@ -6,6 +6,11 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
         var originalInitFunc = Game.shimmerTypes['golden'].initFunc.bind(Game.shimmerTypes['golden']);
         Game.shimmerTypes['golden'].initFunc = function(me) {
             originalInitFunc(me);
+
+            // more golden cookies
+            this.minTime = 900;
+            this.maxTime = 2700;
+            
             //select an effect
             var list=[];
             //if (me.wrath>0) list.push('clot','multiply cookies','ruin cookies');
