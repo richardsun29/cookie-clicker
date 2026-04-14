@@ -8,8 +8,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             originalInitFunc(me);
 
             // more golden cookies
-            this.minTime = 900;
-            this.maxTime = 2700;
+            this.minTime = 3000;
+            this.maxTime = 9000;
             
             //select an effect
             var list=[];
