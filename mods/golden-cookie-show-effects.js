@@ -3,6 +3,12 @@
 
 Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
     init:function(){
+        var originalMouseCpsFunc = Game.mouseCps;
+        Game.mouseCps = function() {
+            return originalMouseCpsFunc() * 1000;
+        };
+        Game.computedMouseCps = Game.mouseCps();
+        
         var originalInitFunc = Game.shimmerTypes['golden'].initFunc.bind(Game.shimmerTypes['golden']);
         Game.shimmerTypes['golden'].initFunc = function(me) {
             originalInitFunc(me);
