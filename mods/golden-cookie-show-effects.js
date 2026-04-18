@@ -5,7 +5,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
     init:function(){
         var originalMouseCpsFunc = Game.mouseCps;
         Game.mouseCps = function() {
-            return originalMouseCpsFunc() * 1000;
+            return originalMouseCpsFunc() * 100;
         };
         Game.computedMouseCps = Game.mouseCps();
         
