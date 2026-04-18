@@ -8,8 +8,8 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             originalInitFunc(me);
 
             // more golden cookies
-            this.minTime = 3000;
-            this.maxTime = 9000;
+            this.minTime = 2000;
+            this.maxTime = 6000;
             
             //select an effect
             var list=[];
@@ -216,7 +216,7 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             else if (choice=='dragon harvest')
             {
-                buff=Game.gainBuff('dragon harvest',Math.ceil(180*effectDurMod),150);
+                buff=Game.gainBuff('dragon harvest',Math.ceil(180*effectDurMod),1500);
             }
             else if (choice=='everything must go')
             {
@@ -249,11 +249,11 @@ Game.registerMod('richardsun29/cookie-clicker/mods/golden-cookie-show-effect',{
             }
             else if (choice=='click frenzy')
             {
-                buff=Game.gainBuff('click frenzy',Math.ceil(13*effectDurMod),777777);
+                buff=Game.gainBuff('click frenzy',Math.ceil(13*effectDurMod),7777777);
             }
             else if (choice=='dragonflight')
             {
-                buff=Game.gainBuff('dragonflight',Math.ceil(10*effectDurMod),1111111);
+                buff=Game.gainBuff('dragonflight',Math.ceil(10*effectDurMod),11111111);
                 //if (Math.random()<0.8) Game.killBuff('Click frenzy');
             }
             else if (choice=='chain cookie')
